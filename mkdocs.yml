@@ -8,7 +8,6 @@ theme:
     accent: red
   
   features:
-    - navigation.tabs
     - navigation.sections
 nav:
   - Home: index.md
