@@ -2,7 +2,14 @@ site_name: Randominipedia
 site_url: https://mydomain.org/mysite
 theme:
   name: material
-
+  palette: 
+    scheme: slate
+    primary: indigo
+    accent: red
+  
+  features:
+    - navigation.tabs
+    - navigation.sections
 nav:
   - Home: index.md
   - How To Contribute: howToGit.md
