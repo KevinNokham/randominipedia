@@ -3,6 +3,10 @@ site_url: https://mydomain.org/mysite
 theme:
   name: material
 
+nav:
+  - Home: index.md
+  - How To Contribute: howToGit.md
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
