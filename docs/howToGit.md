@@ -17,24 +17,30 @@ The easiest part will be installing everything. You'll need to grab the followin
 > 2. Python Environments
 
 ### Creating the workspace
-A workspace is VSC's version of a file explorer. The root will be whatever folder you tell VSC to open up initially - we'll be using a virtual environment to make sure whatever we write isn't depenendent on any modules we unknowingly installed. This section can be confusing so I recommend not rushing through it. Doing so will likely result in a messy workspace which matters since:
+A workspace is VSC's version of a file explorer. In here, we'll keep all the relevant files we need to for writing technical documentation in VSC. The root will be whatever folder you tell VSC to open up initially. In the root, we'll have a folder for a virtual environment; it's to make sure whatever we write isn't depenendent on any modules we unknowingly installed. In another folder, we'll also have our local version of the repository. The local repository is how we'll be remotely working on any changes that will eventually be pushed to the repository hosted on GitHub. This section can be confusing so I recommend not rushing through it. Doing so will likely result in a messy workspace which matters since:
 
 1. You'll want to use the `mkdocs serve` for testing an offline version of the site. The only other way to preview your changes would be to push your commits to the testing branch which is prohibited.
 2. We care about making the contribution process easy for ourselves. While you could just edit a .gitignore file to reduce the organizational issues stemming from a messy workspace, this keep things visually tidy.
 
 #### Setting up the virtual environment
-1. In the *Tool Bar* at the top, go to **File > Open folder**.
-2. Create a folder somewhere that will hold all your files. You can call it *LESSDocumentWorkspace*.
-3. Open that folder using *VSC*. You should see a new, empty explorer UI on the left side now.
-4. Using `Ctrl + Shift + P` will open up the *VSC* command terminal. Look for `Python: Create Virtual Environment`.
-5. Executing the command will create a new .venv folder with all the files you need to run a virtual environment inside.
+1. In the **Tool Bar** at the top, go to **File > Open folder**.
+2. Create a folder somewhere that will hold all your files. This folder will be our workspace. You can call it *MyDocumentWorkspace* if you wish.
+3. Open that folder using VSC. You should see a new, empty explorer UI on the left side now.
+4. Using `Ctrl + Shift + P` will open up the **VSC command terminal**. Look for `Python: Create Virtual Environment`.
+5. Executing the command will create a new *.venv* folder with all the files you need to run a virtual environment inside.
 
-The .venv is now created but you'll need to activate a script in order to actually use it. We'll come back to it after we clone the repository.
+The virtual environment is now created. It'll automatically activate on initial creation; to access it, you'll need to open a new command prompt terminal. You can verify it's working if you see `(YourVenv'sName)` at the start of your command line prompt in the terminal. Any time you close Visual Studio Code or exit out of the virtual environment, you'll want to activate it again by opening the **VSC command terminal**, running `Python: Select Interpreter` and then selecting the *Python.exe* inside of your `.venv` folder.
+
+To set up the virtual environment with the scripts we'll be using for contributing, you'll only need to run one command inside the virtual environment: `pip install mkdocs-material`. This will install all necessary files inside of the 
 
 At this point you can technically contribute to the repository but passing off the changes through a file transfer. However, the point of learning all of this is to make it *easy* for you to contribute. Therefore, we now need to set up Git.
 
-#### Cloning the repository through Git
-Cloning the repository is fairly straightforward.
+#### Cloning the repository through Git and VSC
+There are a few ways to go about cloning the repository, but I'll teach you the most straightforward way.
 
-1. In the **Source Control** tab on *VSC*, click **Clone Repository**.
-2. For the URL, enter `https://github.com/KevinNokham/randominipedia`.
+1. In VSC, make sure you're in the workspace established earlier (*MyDocumentWorkspace* if you've been following along).
+2. In the **VSC command terminal**, select `Git: Clone`. For the URL, enter `https://github.com/KevinNokham/randominipedia`.
+3. You now need to select a folder to store your local version of the repository. Whatever folder you select will contain all the cloned repository files starting at the repository's root level.
+> Note that the location of this folder can be anywhere on your computer or even another remote storage device. For the purposes of this tutorial, I'll be creating a new folder called *myLocalRepository* in *MyDocumentWorkspace* and selecting that as the destination.
+
+You now have a local, cloned repository of `randominipedia`. Any changes you make to the files here will be local only until you push it to one of the branches. 
