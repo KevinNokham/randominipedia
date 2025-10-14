@@ -31,7 +31,10 @@ A workspace is VSC's version of a file explorer. The root will be whatever folde
 
 The .venv is now created but you'll need to activate a script in order to actually use it. We'll come back to it after we clone the repository.
 
-At this point you can technically contribute to the repository
+At this point you can technically contribute to the repository but passing off the changes through a file transfer. However, the point of learning all of this is to make it *easy* for you to contribute. Therefore, we now need to set up Git.
 
-#### Cloning the repository
-Before you can clone the repository for editing, you'll need a few things:
+#### Cloning the repository through Git
+Cloning the repository is fairly straightforward.
+
+1. In the **Source Control** tab on *VSC*, click **Clone Repository**.
+2. For the URL, enter `https://github.com/KevinNokham/randominipedia`.
