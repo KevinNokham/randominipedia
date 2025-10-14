@@ -15,9 +15,12 @@ theme:
   
   features:
     - navigation.sections
+    - content.tooltips
 nav:
   - Home: index.md
-  - How To Contribute: howToGit.md
+  - User Guide:
+    - How To Contribute: howToContribute.md
+    - How To Write: howToWrite.md
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -26,4 +29,10 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.superfences
+  - abbr
+  - attr_list
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences
