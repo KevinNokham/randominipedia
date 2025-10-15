@@ -1,3 +1,3 @@
 # On Writing Quality Technical Documentation
 
-In this guide
+I haven't finished reading, so this section remains blank.

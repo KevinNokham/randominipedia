@@ -9,13 +9,22 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   palette: 
-    scheme: slate
-    primary: indigo
-    accent: red
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
   
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
   features:
-    - navigation.sections
-    - content.tooltips
+  - navigation.sections
+  - content.tooltips
+
+extra_css:
+  - stylesheets/extra.css
+
 nav:
   - Home: index.md
   - User Guide:
